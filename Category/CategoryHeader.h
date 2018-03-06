@@ -4,8 +4,7 @@
 //
 //  Created by hefei on 2018/3/6.
 //
-//第三方类
-#import "MBProgressHUD+Add.h"
+
 //数据类型工具类
 #import "NSArray+Category.h"
 #import "NSMutableArray+Category.h"

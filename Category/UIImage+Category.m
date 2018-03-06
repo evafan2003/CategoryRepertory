@@ -375,7 +375,7 @@
     CGFloat secondHeight = CGImageGetHeight(secondImageRef);
     CGSize mergedSize = CGSizeMake(MAX(secondHeight, secondWidth), MAX(secondHeight, secondWidth));
     UIGraphicsBeginImageContext(mergedSize);
-    [[UIImage imageWithColor:kColorWhite] drawInRect:CGRectMake(0, 0, mergedSize.width, mergedSize.height)];
+    [[UIImage imageWithColor:[UIColor whiteColor]] drawInRect:CGRectMake(0, 0, mergedSize.width, mergedSize.height)];
     [secondImage drawInRect:CGRectMake((mergedSize.width-secondWidth)/2, (mergedSize.height-secondHeight)/2, secondWidth, secondHeight)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

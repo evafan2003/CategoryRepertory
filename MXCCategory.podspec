@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXCCategory"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "test"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/evafan2003/CategoryRepertory.git", :tag => "v#{s.version }" }
+  s.source       = { :git => "https://github.com/evafan2003/CategoryRepertory.git", :branch => "master", :tag => "v#{s.version }" }
   # s.source       = { :git => "https://github.com/evafan2003/CategoryRepertory.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

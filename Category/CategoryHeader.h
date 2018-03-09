@@ -20,6 +20,8 @@
 #import "NSString+MD5.h"
 #import "NSString+Predicate.h"
 #import "NSTimer+Category.h"
+#import "NSObject+ModelToDictionary.h"
+
 //视图相关类
 #import "UIButton+Category.h"
 #import "UIColor+BGHexColor.h"

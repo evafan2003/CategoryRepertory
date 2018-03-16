@@ -36,3 +36,5 @@
 #import "UIView+Animation.h"
 #import "UIView+BGFrame.h"
 #import "UIView+Category.h"
+
+#import "MBProgressHUD+Add.h"

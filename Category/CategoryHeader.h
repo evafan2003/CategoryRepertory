@@ -21,8 +21,8 @@
 #import "NSString+Predicate.h"
 #import "NSTimer+Category.h"
 #import "NSObject+ModelToDictionary.h"
-#import "NSDictionary+decription.h"
-#import "NSArray+decription.h"
+//#import "NSDictionary+decription.h"
+//#import "NSArray+decription.h"
 
 
 //视图相关类

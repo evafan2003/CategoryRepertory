@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXCCategory"
-  s.version      = "0.0.4"
+  s.version      = "0.0.6"
   s.summary      = "test"
 
   # This description is used to generate tags and improve search results.
@@ -133,5 +133,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "MBProgressHUD", "~> 1.0.0"
+  s.dependency "MBProgressHUD"
 end

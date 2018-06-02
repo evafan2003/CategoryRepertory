@@ -10,6 +10,72 @@
 
 @implementation NSString (Category)
 
+//根据身份证号获取生日
+-(NSString *)birthdayStrFromIdentityCard
+{
+    NSMutableString *result = [NSMutableString stringWithCapacity:0];
+    NSString *year = nil;
+    NSString *month = nil;
+    
+    BOOL isAllNumber = YES;
+    NSString *day = nil;
+    if([self length]<14)
+        return result;
+    
+    //**截取前14位
+    NSString *fontNumer = [self substringWithRange:NSMakeRange(0, 13)];
+    
+    //**检测前14位否全都是数字;
+    const char *str = [fontNumer UTF8String];
+    const char *p = str;
+    while (*p!='\0') {
+        if(!(*p>='0'&&*p<='9'))
+            isAllNumber = NO;
+        p++;
+    }
+    if(!isAllNumber)
+        return result;
+    
+    year = [self substringWithRange:NSMakeRange(6, 4)];
+    month = [self substringWithRange:NSMakeRange(10, 2)];
+    day = [self substringWithRange:NSMakeRange(12,2)];
+    
+    [result appendString:year];
+    [result appendString:@"年"];
+    [result appendString:month];
+    [result appendString:@"月"];
+    [result appendString:day];
+    [result appendString:@"日"];
+    return result;
+}
+//根据身份证号性别
+-(NSString *)getIdentityCardSex
+{
+    int sexInt=[[self substringWithRange:NSMakeRange(16,1)] intValue];
+    
+    if(sexInt%2!=0)
+    {
+        return @"1";
+    }
+    else
+    {
+        return @"2";
+    }
+}
+//根据省份证号获取年龄
+-(NSString *)getIdentityCardAge
+{
+    
+    NSDateFormatter *formatterTow = [[NSDateFormatter alloc]init];
+    [formatterTow setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *bsyDate = [formatterTow dateFromString:[self birthdayStrFromIdentityCard:self]];
+    
+    NSTimeInterval dateDiff = [bsyDate timeIntervalSinceNow];
+    
+    int age = trunc(dateDiff/(60*60*24))/365;
+    
+    return [NSString stringWithFormat:@"%d",-age];
+}
 
 + (NSString*) getSecrectStringWithPhoneNumber:(NSString*)phoneNum
 {

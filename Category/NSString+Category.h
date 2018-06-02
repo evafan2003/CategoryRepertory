@@ -30,6 +30,14 @@
 
 - (NSMutableDictionary *)getURLParameters;
 
+//根据身份证号获取生日
+-(NSString *)birthdayStrFromIdentityCard;
+
+//根据身份证号性别
+-(NSString *)getIdentityCardSex;
+
+//根据省份证号获取年龄
+-(NSString *)getIdentityCardAge;
 @end
 
 
